@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>The Movie Database(TMDb)</title>
+</head>
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <ul class="header__left">
+        <li class="header__logo">
+          <a href="#" class="header__link">
+            <img class="header__logo-img" src="Photo/blue_short-8e7b30f73a4020692ccca9c88bafe5dcb6f8a62a4c6bc55cd9ba82bb2cd95f6c.svg" alt="">
+          </a>
+        <li class="header__menu">
+          <li class="header__film">
+            <a href="#" id="film" class="header__link" onmousemove="myFunction(event)" onmouseout="clearCoor()">Фильмы</a>            
+            
+            <div class="dropdown header__film_dropdown">
+              <ul class="dropdown__content header__film_dropdown-menu">
+                <li class="header__film_dropdown-popular">popular</li>
+                <li class="header__film_dropdown-live">live</li>
+                <li class="header__film_dropdown-wait">wait</li>
+                <li class="header__film_dropdown-goods">goods</li>
+              </ul>
+            </div>
+
+            <span id="demo"></span>
+          </li>
+          <li class="header__serialy">
+            <a href="#" id="serial" class="header__link">Сериалы</a>
+            <span id="spans"></span>
+          </li>
+          <li class="header__humans">
+            <a href="#" id="humans" class="header__link">Люди</a>
+            <span id="spans"></span>
+          </li>
+          <li class="header__again">
+            <a href="#" id="again" class="header__link">Ещё</a>
+            <span id="spans"></span>
+          </li>
+        </li>
+      </ul>
+      <ul class="header__right">
+        <li><a href="#" class="header__link">
+          <img class="header__plus" src="Photo/plus.svg" alt="PlusIcon">
+        </a></li>
+        <li class="header__lang"><a href="#" class="header__link header__link-pad">RU</a></li>
+        <li class="header__log"><a href="#" class="header__link">Войти</a></li>
+        <li class="header__registration"><a href="#" class="header__link">Присоединиться к TMDB</a></li>
+        <li class="header__search header__link">
+          <img class="header__search-icon" src="Photo/search.svg" alt="SearchIcon">
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="welcome">      
+
+    <div class="container"> 
+      <div class="welcome__body">   
+        <div class="welcome__gradient">
+          <div class="welcome__text">
+            <h2>Добро пожаловать.</h2>
+            <h3>Миллионы фильмов, сериалов и людей. Исследуйте сейчас.</h3>
+            <div class="welcome__search">
+              <form action="">
+                <label for="">
+                  <input type="text" placeholder="Найти фильм, сериал, персону......">
+                </label>
+                  <input class="welcome__submit" type="submit" value="Search">
+              </form>
+              <!--<button>search</button>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <div class="popular">
+      <div class="container popular__container">
+        <div class="popular__header">
+          <h2>Что популярно</h2>
+          <div class="popular__button">
+            <p><a class="popular__tv" href="#">По ТВ</a></p>
+            <p><a class="popular__cinema" href="#">В кинотеатрах </a></p>
+          </div>
+        </div>
+        <div class="popular__content">
+          <div class="popular__row">
+
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Xoroshiy_Doktor.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="title card__title">Хороший доктор</div>
+                <div class="subtitle card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Angel_Mesti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Boytes_Xod.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Anatomiya_Smerti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Xoroshiy_Doktor.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Angel_Mesti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Boytes_Xod.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Anatomiya_Smerti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Xoroshiy_Doktor.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Angel_Mesti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Boytes_Xod.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Anatomiya_Smerti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Xoroshiy_Doktor.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Angel_Mesti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Boytes_Xod.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card__img">
+                <img src="Photo/Popular/Anatomiya_Smerti.jpg" alt="">
+                <a class="card__more" href="#">
+                  <img src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+                </a>
+              </div>
+              <div class="card__footer">
+                <div class="card__ring">86</div>
+                <div class="card__title">Хороший доктор</div>
+                <div class="card__subtitle">25 сен 2017</div>
+                <div class="hover"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+  </section>
+
+  <div class="treyler">      
+    <div class="container treyler__container">
+      <!--<div class="treyler__opac">Opacityni qila olmadim</div>-->
+      <div class="treyler__body welcome__body">
+        <div class="popular__header treyler__header">
+          <h2>Последние трейлеры</h2>
+          <div class="popular__button treyler__button">
+            <p><a class="popular__tv treyler__tv" href="#">По ТВ</a></p>
+            <p><a class="popular__cinema" href="#">В кинотеатрах </a></p>
+          </div>
+        </div>
+          <div class="treyler__video">
+            <img src="Photo/Treyler.jpg" alt="Foto">
+            <div class="treyler__m">
+              <a href="#">
+                <img class="treyler__more" src="Photo/Icons/glyphicons-basic-947-circle-more-white-4c440dfc1b0e626c70f4853dbbce9c4d1f2c5d8f3e05a7d3df47881cbd816adf.svg" alt="">
+              </a>
+            </div>
+            <div class="treyler__text">
+              <div class="title treyler__title">Хороший доктор</div>
+              <div class="subtitle treyler__subtitle">Трейлер №1. Сезон 4</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+<script src="main.js"></script> 
+</body>
+</html>
